@@ -338,3 +338,18 @@ mautic_1    | 172.17.0.1 - - [07/Apr/2018:04:57:26 +0000] "GET /media/images/fav
 mautic_1    | [CRON] Success!
 mautic_1    | 127.0.0.1 - - [07/Apr/2018:04:57:30 +0000] "OPTIONS * HTTP/1.0" 200 126 "-" "Apache/2.4.10 (Debian) PHP/7.0.27 (internal dummy connection)"
 mautic_1    | 127.0.0.1 - - [07/Apr/2018:04:57:33 +0000] "OPTIONS * HTTP/1.0" 200 126 "-" "Apache/2.4.10 (Debian) PHP/7.0.27 (internal dummy connection)"
+
+
+
+# fititnt at bravo in /alligo/code/fititnt/mautic-playground
+$ docker ps
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                  NAMES
+b90d65a8c8d5        mautic/mautic       "/entrypoint.sh apac…"   38 seconds ago      Up 29 seconds       0.0.0.0:8080->80/tcp   mauticplayground_mautic_1
+3048859efa50        mysql:5.6           "docker-entrypoint.s…"   49 seconds ago      Up 38 seconds       3306/tcp               mauticplayground_mauticdb_1
+
+# fititnt at bravo in /alligo/code/fititnt/mautic-playground
+$ docker-compose down --volumes --rmi all
+Removing mauticplayground_mautic_1   ... done
+Removing mauticplayground_mauticdb_1 ... done
+Removing image mysql:5.6
+Removing image mautic/mautic
